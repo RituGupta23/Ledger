@@ -1,0 +1,224 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-off-white: var(--theme-bg);
+  --color-near-black: var(--theme-fg);
+  --color-white: var(--theme-surface);
+  
+  --color-amber-50: var(--theme-amber-bg);
+  --color-amber-200: var(--theme-amber-border);
+  --color-amber-600: var(--theme-amber-text);
+  --color-amber-800: var(--theme-amber-text-dark);
+  
+  --color-red-50: var(--theme-red-bg);
+  --color-red-200: var(--theme-red-border);
+  --color-red-800: var(--theme-red-text-dark);
+  
+  --color-green-50: var(--theme-green-bg);
+  --color-green-200: var(--theme-green-border);
+  --color-green-800: var(--theme-green-text-dark);
+
+  --color-blue-50: var(--theme-blue-50);
+  --color-blue-200: var(--theme-blue-200);
+  --color-blue-400: var(--theme-blue-400);
+  --color-blue-800: var(--theme-blue-800);
+  --color-blue-900: var(--theme-blue-900);
+  --color-blue-950: var(--theme-blue-950);
+
+  --color-violet-50: var(--theme-violet-50);
+  --color-violet-200: var(--theme-violet-200);
+  --color-violet-400: var(--theme-violet-400);
+  --color-violet-800: var(--theme-violet-800);
+  --color-violet-900: var(--theme-violet-900);
+  --color-violet-950: var(--theme-violet-950);
+
+  --color-teal-50: var(--theme-teal-50);
+  --color-teal-200: var(--theme-teal-200);
+  --color-teal-400: var(--theme-teal-400);
+  --color-teal-800: var(--theme-teal-800);
+  --color-teal-900: var(--theme-teal-900);
+  --color-teal-950: var(--theme-teal-950);
+
+  --color-zinc-100: var(--theme-zinc-100);
+  --color-zinc-300: var(--theme-zinc-300);
+  --color-zinc-400: var(--theme-zinc-400);
+  --color-zinc-800: var(--theme-zinc-800);
+  --color-zinc-900: var(--theme-zinc-900);
+  --color-zinc-950: var(--theme-zinc-950);
+
+  --color-gray-50: var(--theme-gray-50);
+  --color-gray-100: var(--theme-gray-100);
+  --color-gray-200: var(--theme-border);
+  --color-muted-gray: var(--theme-muted-text);
+  
+  --color-income: var(--theme-income);
+  --color-expense: var(--theme-expense);
+  --color-amber: var(--theme-amber);
+  
+  --font-sans: var(--font-dm-sans);
+  --font-serif: var(--font-dm-serif);
+}
+
+:root {
+  --theme-bg: #FAFAF8;
+  --theme-fg: #1A1A18;
+  --theme-surface: #FFFFFF;
+  
+  --theme-gray-50: #f9fafb;
+  --theme-gray-100: #f3f4f6;
+  --theme-border: #e5e7eb;
+  --theme-muted-text: #6B7280;
+  
+  --theme-income: #5bd788;
+  --theme-expense: #f76b6b;
+  --theme-amber: #B45309;
+
+  /* Alert colors - Light mode */
+  --theme-amber-bg: #fffbeb;
+  --theme-amber-border: #fde68a;
+  --theme-amber-text: #d97706;
+  --theme-amber-text-dark: #92400e;
+  
+  --theme-red-bg: #fef2f2;
+  --theme-red-border: #fecaca;
+  --theme-red-text-dark: #991b1b;                                 
+  
+  --theme-green-bg: #f0fdf4;
+  --theme-green-border: #bbf7d0;
+  --theme-green-text-dark: #166534;
+
+  --theme-blue-50: #eff6ff;
+  --theme-blue-200: #bfdbfe;
+  --theme-blue-400: #60a5fa;
+  --theme-blue-800: #1e40af;
+  --theme-blue-900: #1e3a8a;
+  --theme-blue-950: #172554;
+
+  --theme-violet-50: #f5f3ff;
+  --theme-violet-200: #ddd6fe;
+  --theme-violet-400: #a78bfa;
+  --theme-violet-800: #5b21b6;
+  --theme-violet-900: #4c1d95;
+  --theme-violet-950: #2e1065;
+
+  --theme-teal-50: #f0fdfa;
+  --theme-teal-200: #99f6e4;
+  --theme-teal-400: #2dd4bf;
+  --theme-teal-800: #115e59;
+  --theme-teal-900: #134e4a;
+  --theme-teal-950: #042f2e;
+
+  --theme-zinc-100: #f4f4f5;
+  --theme-zinc-300: #d4d4d8;
+  --theme-zinc-400: #a1a1aa;
+  --theme-zinc-800: #27272a;
+  --theme-zinc-900: #18181b;
+  --theme-zinc-950: #09090b;
+
+  /* Category Chart Fills - Light */
+  --cat-food: #d97706;
+  --cat-trans: #2563eb;
+  --cat-house: #6b7280;
+  --cat-ent: #8b5cf6;
+  --cat-health: #0d9488;
+  --cat-inc: #16a34a;
+}
+
+html.dark {
+  --theme-bg: #121210;
+  --theme-fg: #FAFAF8;
+  --theme-surface: #1E1E1C; 
+  
+  --theme-gray-50: #262622;
+  --theme-gray-100: #2C2C28;
+  --theme-border: #33332F;
+  --theme-muted-text: #A1A1AA;
+  
+  --theme-income: #82d4a0;
+  --theme-expense: #ff9393;
+  --theme-amber: #FBBF24;
+
+  /* Alert colors - Dark mode */
+  --theme-amber-bg: #3d2a09;
+  --theme-amber-border: #563e14;
+  --theme-amber-text: #fbbf24;
+  --theme-amber-text-dark: #fcd34d;
+  
+  --theme-red-bg: #3d1414;
+  --theme-red-border: #5c1818;
+  --theme-red-text-dark: #fca5a5;
+  
+  --theme-green-bg: #0d2b18;
+  --theme-green-border: #144926;
+  --theme-green-text-dark: #86efac;
+
+  --theme-blue-50: #0f223a;
+  --theme-blue-200: #1e3a5f;
+  --theme-blue-400: #93c5fd;
+  --theme-blue-800: #93c5fd;
+  --theme-blue-900: #143055;
+  --theme-blue-950: #0b1b2d;
+
+  --theme-violet-50: #2a1a4a;
+  --theme-violet-200: #4b2f7a;
+  --theme-violet-400: #c4b5fd;
+  --theme-violet-800: #c4b5fd;
+  --theme-violet-900: #35215e;
+  --theme-violet-950: #1e1237;
+
+  --theme-teal-50: #0f2f2c;
+  --theme-teal-200: #1b4d49;
+  --theme-teal-400: #99f6e4;
+  --theme-teal-800: #99f6e4;
+  --theme-teal-900: #123a37;
+  --theme-teal-950: #09201f;
+
+  --theme-zinc-100: #2a2a2f;
+  --theme-zinc-300: #3f3f46;
+  --theme-zinc-400: #d4d4d8;
+  --theme-zinc-800: #e4e4e7;
+  --theme-zinc-900: #27272a;
+  --theme-zinc-950: #171717;
+
+  /* Category Chart Fills - Dark */
+  --cat-food: #fbbf24;
+  --cat-trans: #60a5fa;
+  --cat-house: #d4d4d8;
+  --cat-ent: #c4b5fd;
+  --cat-health: #5eead4;
+  --cat-inc: #4ade80;
+}
+
+body {
+  background-color: var(--theme-bg);
+  color: var(--theme-fg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Smooth transitions globally */
+body, div, span, nav, header, aside, button, svg, path, rect, polyline, line {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-duration: 400ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--theme-border) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--theme-border);
+  border-radius: 10px;
+}
